@@ -42,7 +42,7 @@ RUN apt-get update \&& apt-get install -y -qq --no-install-recommends \
 
 FROM cacher as builder
 
-# Install FIRASim and VSSReferee
+# Install VSSReferee
 RUN cd /vsss_ws && \
     git clone https://github.com/VSSSLeague/VSSReferee.git && \
     cd VSSReferee && \
