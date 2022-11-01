@@ -54,7 +54,7 @@ RUN cd /vsss_ws/VSSReferee && \
 # Install SSL-VISION
 RUN apt-get update && \
     cd /vsss_ws && \
-    git clone https://github.com/RoboCup-SSL/ssl-vision.git && \
+    git clone https://github.com/fbot-furg/ssl-vision.git && \
     cd ssl-vision && \
     sh InstallPackagesUbuntu.sh && \
     mkdir build && \
