@@ -43,13 +43,13 @@ RUN apt-get update \&& apt-get install -y -qq --no-install-recommends \
 FROM cacher as builder
 
 # Install VSSReferee
-RUN cd /vsss_ws && \
-    git clone https://github.com/VSSSLeague/VSSReferee.git && \
-    cd VSSReferee && \
-    git checkout CBFRS
+# RUN cd /vsss_ws && \
+#     git clone https://github.com/VSSSLeague/VSSReferee.git && \
+#     cd VSSReferee && \
+#     git checkout CBFRS
 
-RUN cd /vsss_ws/VSSReferee && \
-    mkdir build && cd build && qmake .. && make
+# RUN cd /vsss_ws/VSSReferee && \
+#     mkdir build && cd build && qmake .. && make
 
 # Install SSL-VISION
 RUN apt-get update && \
@@ -79,5 +79,5 @@ COPY constants.json /vsss_ws/VSSReferee/src/constants/
 
 # Run ssl-vision and VSSReferee
 # CMD /vsss_ws/VSSReferee/bin/VSSReferee --3v3 --record false
-CMD cd /vsss_ws/ssl-vision && ./bin/vision -c 1
+# CMD cd /vsss_ws/ssl-vision && ./bin/vision -c 1;
 
