@@ -22,6 +22,7 @@ RUN apt-get update && apt-get install -y \
     v4l-utils \
     libode-dev \
     libboost-dev \
+    xclip \
     sudo && \
     apt-get clean && \
     cd /tmp && \
@@ -79,5 +80,5 @@ COPY constants.json /vsss_ws/VSSReferee/src/constants/
 
 # Run ssl-vision and VSSReferee
 # CMD /vsss_ws/VSSReferee/bin/VSSReferee --3v3 --record false
-# CMD cd /vsss_ws/ssl-vision && ./bin/vision -c 1;
+# CMD cd /vsss_ws/ssl-vision && ./bin/vision -s -c 1;
 
